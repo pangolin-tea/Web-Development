@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../Hw4/design.css">
+<title>HW3</title>
+</head>
+<body>
+	<a href="../"><button type="button">Home</button></a>
+	<h1>HW 3: Survey</h1>
+	
+	<h2>Survey</h2>
+	<form action="https://summer-2021.cs.utexas.edu/cs329e-mitra/mattstan/Hw3/form_confirm.html">
+	<table>
+		<tr><td><label for="firstname">First Name:</label>
+		<input type="text" name="firstname" id="firstname"></tr>
+		<tr>
+			<td><label for="lastname">Last Name:</label>
+			<input type="text" name="lastname" id="lastname"></td>
+		</tr>
+		<tr>
+			<td><label for="street">Street Address</label>
+			<input type="text" name="street" id="street"></td>
+		</tr>
+		<tr>
+			<td><label for="email">E-mail Address</label>
+			<input type="text" name="email" id="email"></td>
+		</tr>
+	</table>
+	<h2>Most Liked about Campus</h2>
+		<p>
+		<label for="stud">Students</label>
+		<input type="checkbox" name="liked" id="stud"><br>
+		<label for="local">Location</label>
+		<input type="checkbox" name="local" id="local"><br>
+		<label for="campus">Campus</label>
+		<input type="checkbox" name="campus" id="campus"><br>
+		<label for="courses">Courses Offered</label>
+		<input type="checkbox" name="courses" id="courses"><br>
+		<label for="dorm">Dorm Rooms</label>
+		<input type="checkbox" name="dorm" id="dorm"><br>
+		<label for="sports">Sports</label>
+		<input type="checkbox" name="sports" id="sports">
+		</p>
+
+	<h2>Interest</h2>
+		<div>
+		<label for="family">Family</label>
+		<input type="radio" name="interest" id="family"><br>
+		<label for="friends">Friends</label>
+		<input type="radio" name="interest" id="friends"><br>
+		<label for="tele">Television</label>
+		<input type="radio" name="interest" id="tele"><br>
+		<label for="int">Internet</label>
+		<input type="radio" name="interest" id="int"><br>
+		<label for="oth">Other</label>
+		<input type="radio" name="interest" id="oth"><br>
+		</div>
+
+	<h2>Department Visited</h2>
+	<select name="department">
+		<option value="engine">Cockrell Schooll of Engineering</option>
+		<option value="education">College of Education</option>
+		<option value="arts">College of Fine Arts</option>
+		<option value="liberal">College of Liberal Arts</option>
+		<option value="nat">College of Natural Science</option>
+		<option value="phar">College of Pharmacy</option>
+	</select>
+	<br>
+	<br>
+	<h2>Comments</h2>
+	<label for="comments"></label>
+	<textarea id="comments" name="comments" rows="4" cols="50">Write comments here.</textarea>
+	<br>
+	<br>
+	<button type="submit">Submit</button>
+	</form>
+<br>	
+	<form action="https://summer-2021.cs.utexas.edu/cs329e-mitra/mattstan/Hw3/hw3.html">
+    		<button type="submit">Reset</button>
+	</form>	
+</body>
+</html>
