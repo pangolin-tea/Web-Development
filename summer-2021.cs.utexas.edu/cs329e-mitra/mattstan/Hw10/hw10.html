@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <link rel='stylesheet' href="hw10.css">
+    <meta charset="UTF-8">
+    <title>Astronomy Quiz</title>
+</head>
+
+
+<body>
+<a href = '../index.html'><button>Home</button></a>
+<h1>Astronomy Quiz</h1>
+<form method="post" action="https://summer-2021.cs.utexas.edu/cs329e-mitra/mattstan/Hw10/hw10.php">
+
+<p><strong>1)</strong>According to Kepler the orbit of the earth is a circle with the sun at the center.</p>
+<input type='radio' id = 'true' name='kep' value='incorrect'>
+<label for='true'>True</label><br>
+<input type='radio' id = 'false' name = 'kep' value = 'correct'>
+<label for='false'>False</label><br>
+
+<p><strong>2)</strong>Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.</p>
+<input type='radio' id = 'true2' name='orb' value='correct'>
+<label for='true2'>True</label><br>
+<input type='radio' id = 'false2' name = 'orb' value = 'incorrect'>
+<label for='false2'>False</label><br>
+
+<p><strong>3)</strong>The total amount of energy that a star emits is directly related to its</p>
+<input type='checkbox' id = '31' name = 'star' value ='incorrect'>
+<label for='31'>surface gravity and magnetic field</label><br>
+<input type='checkbox' id = '32' name = 'star' value ='correct'>
+<label for='32'>radius and temperature</label><br>
+<input type='checkbox' id = '33' name = 'star' value ='incorrect'>
+<label for='33'>pressure and volume</label><br>
+<input type='checkbox' id = '34' name = 'star' value ='incorrect'>
+<label for='34'>location and velocity</label><br>
+
+<p><strong>4)</strong>Stars that live the longest have</p><br>
+<input type='checkbox' id = '41' name = 'live' value = 'incorrect'>
+<label for = '41'>high mass</label><br>
+<input type='checkbox' id = '42' name = 'live' value = 'incorrect'>
+<label for ='42'>high temperature</label><br>
+<input type='checkbox' id = '43' name = 'live' value = 'incorrect'>
+<label for = '43'>lots of hydrogen</label><br>
+<input type='checkbox' id = '44' name = 'live' value = 'correct'>
+<label for = '44'>small mass</label><br><br>
+
+<label for ='5'><strong>5)</strong>A collection of a hundred billion stars, gas, and dust is called a _____.</label>
+<input type='text' id = '5' name = 'collect'><br>
+
+<label for = '6'><strong>6)</strong>The inverse of the Hubble's constant is a measure of the _____ of the universe.</label>
+<input type ='text' id = '6' name = 'hubble'><br><br>
+
+<input type = 'submit'><br>
+<button onclick='document.forms[0].reset()'>Clear</button><br><br>
+
+</form>
+</body>
+</html>

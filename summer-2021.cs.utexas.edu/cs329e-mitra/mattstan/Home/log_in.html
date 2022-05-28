@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='home.css'>
+        <meta charset = "UTF-8">
+        <title>Choose Your Own Adventure</title>
+    </head>
+    <body>
+	<h1>The Great Emu War</h1>
+
+<div class = 'bar'>
+            <a href = 'home.html'>Home</a>  |  <a href = 'log_in.html'>Log In</a>  |  <a href = 'choose.html'>Choose Your Own Adventure</a>   |   <a href = 'biblio.html'>Biblography</a>   |   <a href = 'contact.html'>Contact Us</a>
+        </div><br />
+<span class = 'center' id = 'response'>
+<form method = 'GET' id = 'form'>
+    <label for = 'user'>Username: </label>
+    <input type = 'text' id = 'user' name = 'user'>
+    <label for = 'pass'>Password: </label>
+    <input type = 'text' id = 'pass' name = 'pass'><br /><br />
+    <input type = 'submit' value = 'Login' class = 'button'>
+</form><br /><br />
+</span>
+<span id = 'usererr'></span>
+<span id = 'passerr'></span>
+<script type = 'module'>
+    import Sha256 from './hash.js';
+    var xhr;
+    if (window.ActiveXObject) {
+        xhr = new ActiveXObject ("Microsoft.XMLHTTP");
+    }
+    else if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest ();
+    }
+
+
+    const form = document.getElementById('form');
+    form.addEventListener("submit", checkSub);
+    function checkSub(event) {
+        event.preventDefault();
+        var user = document.getElementById('user').value;
+        var pass = document.getElementById('pass').value;
+        pass = Sha256.hash(pass);
+        var bool = true;
+        console.log(user);
+        console.log(pass);
+
+
+        if (pass == '') {
+            if (user == ''){
+            document.getElementById('passerr').innerHTML = 'Error: password field empty';
+            document.getElementById('usererr').innerHTML = 'Error: username field empty';
+            bool = false;
+            return;
+            }
+        }
+        else if (user == '') {
+            document.getElementById('usererr').innerHTML = 'Error: username field empty';
+            bool = false;
+            return;
+        }
+        else if (pass == '') {
+            document.getElementById('passerr').innerHTML = 'Error: password field empty';
+            bool = false;
+            return;
+        }
+        if (bool === true) {
+            document.getElementById('usererr').innerHTML = '';
+            document.getElementById('passerr').innerHTML = '';
+            var url = "./check.php?user=" + escape(user) + "&pass=" + escape(pass);
+            xhr.open("GET", url, true);
+    
+            xhr.onreadystatechange = updatePage;
+            xhr.send(null);
+        }
+
+        function updatePage() {
+            if ((xhr.readyState == 4) && (xhr.status == 200))
+            {
+                var response = xhr.responseText;
+                document.getElementById('response').innerHTML = response;
+            }
+        }
+    }
+</script>
+<span id = 'usererr'></span><br />
+<span id = 'passerr'></span>
+
+<img src = 'guy.jpg' alt = 'guy' length = '5%' width = '5%' class = 'guy'>
+<img src = 'emu.jpg' alt = 'emu' length = '5%' width = '5%' class = 'emu'>
+</body>
+</html>

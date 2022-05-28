@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+<meta charset='UTF-8'>
+<link rel='stylesheet' href = 'travel_show.css'>
+<title>Travel Show</title>
+</head>
+
+<body onload = 'begin()'>
+<script>
+let images = ['agra_fort.jpg', 'ajanta_ellora.jpeg', 'akshardham_temple.jpg', 'gateway_of_india.jpg', 'hawa_mahal.jpeg', 'mehrangarh_fort.jpg', 'mysore_palace.jpeg', 'qutub_minar.jpg', 'sun_temple.jpg', 'taj_mahal.jpeg', 'victoria_memorial.jpg']
+let captions = ['Agra Fort', 'Ajante Ellora', 'Akshardham Temple', 'Gateway of India', 'Hawa Mahal', 'Mehrangarh Fort', 'Mysore Palace', 'Qutub Minar', 'Sun Temple', 'Taj Mahal', 'Victoria Memorial']
+var n = 0;
+var times;
+var start_stop = false;
+
+function start() {
+	if (start_stop == false){
+		slideshow();
+		start_stop = true;
+	}
+}
+
+function stop() {
+	if (start_stop == true) {
+		clearInterval(times);
+		start_stop = false;
+	}
+}
+
+function begin() {
+	var image = "<img src = 'https://summer-2021.cs.utexas.edu/cs329e-mitra/mattstan/Hw9/&quot;+&#32;images[n]&#32;+&#32;&quot;' alt = 'ima' height = '480px' width = '640px'><br>";
+	document.getElementById('slide').innerHTML = image;
+
+	var capt = captions[n];
+	var caption = "<caption>" + capt + "</caption>";
+	document.getElementById('capted').innerHTML = caption;
+	n++;
+	start();
+}
+
+function slideshow() {
+	times = setInterval(function() {
+	if (n >=11) {
+	n = 0;
+	}
+	var image = "<img src = 'https://summer-2021.cs.utexas.edu/cs329e-mitra/mattstan/Hw9/&quot;+&#32;images[n]&#32;+&#32;&quot;' alt = 'ima' height = '480px' width = '640px'><br>";
+	document.getElementById('slide').innerHTML = image;
+
+	var capt = captions[n];
+	var caption = "<caption>" + capt + "</caption>";
+	document.getElementById('capted').innerHTML = caption;
+	n++;
+	}, 3000);
+}
+</script>
+
+
+<button onclick="location.href = '../'">Home</button>
+
+<h1>Travel Show</h1>
+
+<span id = 'slide'></span>
+<span id = 'capted'></span><br><br>
+
+<button onclick='start()'>Start</button>
+<button onclick='stop()'>Stop</button>
+
+</body>
+</html>

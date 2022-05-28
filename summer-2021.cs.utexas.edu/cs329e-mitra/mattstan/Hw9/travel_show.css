@@ -1,0 +1,10 @@
+body {
+	background-color: lightblue;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+img {
+	border: 5px solid #618d9e;
+}
