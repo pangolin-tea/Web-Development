@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = 'UTF-8'>
+<link rel ='stylesheet' href = 'hw8.css'>
+</head>
+<script>
+var image1 = 'GalaxyCluster.jpg';
+var image2 = 'InteractingGalaxies.jpg';
+var image3 = 'M51.jpg';
+var image4 = 'M104.jpg';
+var image5 = 'NGC1300.jpg';
+var image6 = 'NGC6217.jpg';
+var number;
+
+let images = [image1, image2, image3, image4, image5, image6];
+let cap = ["Galaxy Cluster", "Interacting Galaxies", "M-51", "M-104", "NGC-1300", "NGC-6217"];
+
+function rando(num) {
+	number =  Math.floor(Math.random() * num);
+}
+
+function pic() {
+	rando(6);
+	var picked = images[number];
+  	var image = "<img src = 'https://summer-2021.cs.utexas.edu/cs329e-mitra/mattstan/Hw8/&quot;+&#32;picked&#32;+&#32;&quot;' alt = 'ima' height = '480px' width = '640px'>";
+	document.getElementById('im').innerHTML = image;
+	
+	var picked2 = cap[number];
+	var caption = "<caption>" + picked2 + "</caption>";
+	document.getElementById('capt').innerHTML = caption;
+}
+</script>
+
+<body onload = 'pic()'>
+
+<button onclick = "location.href = '../'" type = 'button'>Home</button>
+
+<h1>HW 8</h1>
+
+
+<span id = 'im'></span><br>
+<span id = 'capt'></span>
+
+
+</body>
+</html>

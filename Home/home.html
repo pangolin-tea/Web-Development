@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='home.css'>
+        <meta charset = "UTF-8">
+        <title>The Great Emu War</title>
+    </head>
+    <body>
+	<h1>The Great Emu War</h1>
+        <div class = 'bar'>
+            <a href = 'home.html'>Home</a>  |  <a href = 'log_in.html'>Log In</a>  |  <a href = 'choose.html'>Choose Your Own Adventure</a>   |   <a href = 'biblio.html'>Biblography</a>   |   <a href = 'contact.html'>Contact Us</a>
+        </div>
+    <br />
+    <span id = 'slideshow' ><img src= "emus.jpg" alt = 'image' height = '300px' width = '300px'></span>
+    <script>
+        let images = ['emus.jpg', 'dead.jpg', 'they_come.jpg']
+        var i = 1;
+        setInterval(function(){
+        document.getElementById('slideshow').innerHTML = "<img src = "https://summer-2021.cs.utexas.edu/cs329e-mitra/mattstan/Home/+images[i]+" alt = 'image' height = '300px' width = '300px'>";
+        i++;
+        if (i==3) {
+            i = 0;
+        }
+        }, 5000);
+    </script>
+    <div class="intro">
+    <h2>Introduction</h2>
+    <p>Welcome to Matt^2 's premiere introduction to a lesser known event in history called the Great Emu War!</p>
+    </div>
+    <div class="synopsis">
+    <h2> What is the Great Emu War? </h2>
+    <p> Glad you asked! The Great Emu War was a period between November 2nd and December 10th of 1932 where Emu's were declared a nuisance and were targetted for population control through an official Australian military operation command under Major G.P.W. Meridith of the Seventh Heavy Battery of the Royal Australian Artillery.
+    </p>
+    </div>
+    <div class="timeline">
+    <h2> Timeline of Events </h2>
+    <h3> October 1932 </h3>
+    <p>
+    Wheat prices are falling after government subsidies were never delevered and farmers are not happy. Around 20,000 emus make matters worse by breaking into farmland. The Minister of Defence, George Pearce, agrees to start a military campaign. 
+    </p>
+    <h3> November 1, 1932 </h3>
+    <p>
+    Merideth was ready to start immediately after he was given two Lewis guns and 10,000 rounds of ammunition; however, heavy rain caused the emus to scatter over a wider area. In light of this, Merideth delayed the first attack until November.
+    </p>
+    <h3> November 2, 1932 </h3>
+    <p>
+    Going in with extreme confidence, the military men boasted that they would be able to bring in 100 emu skins. On their first attack, in Campion, 50 emus were sighted, but due to them being out of range only around 12 birds were killed.
+    </p>
+    <h3> November 4, 1932 </h3>
+    <p>
+    After the emu's narrow escape at Campion, Meridith decided to set an ambush for the feathered enemy at a local dam. This plan might have been successful if it wasn't for bad luck, as the guns jammed after only killing another 12 out of the 1000 spotted.
+    </p>
+    <h3> November 8, 1932 </h3>
+    <p>
+    The Australian Government was not pleased with the seeming ineptitude of Meredith after he had launched several attacks with little success. Meredith was ordered to withdraw as his performance was starting to become embarassing.  Dominic Servent, an ornithologist implied the emu's had outsmarted Meridith by saying "The Emu command had evidently ordered guerrilla tactics".
+    </p>
+    <h3> November 12, 1932 </h3>
+    <p>
+    Major Meredith was begrugingly approved to start a second campaign; however, his comments about how "a military division made up of emu's could face any army in the world", did not enstill confidence.
+    </p>
+    <h3> November 12, 1932 - December 10, 1932 </h3>
+    <p>
+    The second campaign although more successful, was incredibly inefficient. It is reported that 986 birds were killed using 9,860 bullets. The government again searched for a more effiecint method of dealing with these birdds and finally found success with the bounty system.
+    </p>
+    </div>
+    <div class="video">
+    <p>
+    For more information feel free to <a href="https://youtu.be/BXpu6tbFCsI">watch this video.</a> which goes into more detail.
+    </p>
+    </div>
+    <div class = 'box'><img src = 'Picture1.jpg' alt = 'emu' length = "20%" width = "20%"></div>
+        <span class='sig'>Date: 07/21/2021 Matt^2 </span>
+        <img src = 'guy.jpg' alt = 'guy' length = '5%' width = '5%' class = 'guy'>
+	<img src = 'emu.jpg' alt = 'emu' length = '5%' width = '5%' class = 'emu'>
+    </body>
+</html>

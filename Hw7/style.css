@@ -1,0 +1,43 @@
+body {
+	vertical-align: middle;
+	background-color: lightblue; 
+	font-family: Helvetica, Arial, sans-serif;
+	
+}
+.cor {
+	color: green;
+}
+
+.wrong {
+	color: red;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mid {
+	position: relative;
+	left: 33.8%;
+}
+
+.cent {
+	position: relative;
+	left: 33.8%;
+}	
+
+.cont {
+	background-color: white;
+	height: 135px;
+	width: 350px;
+	vertical-align: middle;
+	position: relative;
+	left: 33.8%;
+	margin-top: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
